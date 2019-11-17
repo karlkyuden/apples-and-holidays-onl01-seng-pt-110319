@@ -69,7 +69,7 @@ def all_supplies_in_holidays(holiday_hash)
       data.each do |supply, value|
         tempWords << "#{supply}, "
       end
-      tempWords.chomp(',')
+      tempWords.chop(',')
       print tempWords
       print "\n"
       tempWords = ""

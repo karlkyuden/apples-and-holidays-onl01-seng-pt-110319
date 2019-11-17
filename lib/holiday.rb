@@ -61,6 +61,7 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   tempWords = ""
+  newWords = ""
   holiday_hash.each do |season, index|
     print "#{season.capitalize}:\n"
     index.each do |event, data|
@@ -69,8 +70,8 @@ def all_supplies_in_holidays(holiday_hash)
       data.each do |supply, value|
         tempWords << "#{supply}, "
       end
-      tempWords.chop(',')
-      print tempWords
+      newWords = tempWords.chop(',')
+      print newWords
       print "\n"
       tempWords = ""
     end
